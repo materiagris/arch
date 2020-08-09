@@ -94,3 +94,38 @@ pacman -S intel-ucode
 ```
 # pacman -S dosfstools ntfs-3g
 ```
+11.1. Terminus font:
+```
+# pacman -S terminus-font
+# pacman -Ql terminus-font
+# setfont ter-v32n
+```
+11.2. Xorg and dwm:
+```
+# pacman -S xorg xorg-xinit git
+# cd /usr/src
+# git clone git://git.suckless.org/dwm
+# git clone git://git.suckless.org/dmenu
+# git clone git://git.suckless.org/st
+# cd dwm
+# make clean install
+# cd ../dmenu
+# make clean install
+# cd ../st
+# make clean install
+# cd
+# echo dwm > .xinitrc
+# startx
+```
+11.3. Sound:
+```
+# pacman -S alsa-utils
+# amixer sset Master unmute
+# amixer sset Speaker unmute
+# amixer sset Headphone unmute
+# alsamixer
+```
+11.4. Internet browsers:
+```
+# pacman -S chromium
+# pacman -S firefox
